@@ -57,7 +57,7 @@ createApp({
 
     },
 
-    doneTask(){
+    doneTask(myTask){
       this.done = true
     }
 
