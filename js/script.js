@@ -11,7 +11,7 @@ createApp({
 
         {
           text:'bucato',
-          done: false
+          done: true
         },
         {
           text:'spesa',
