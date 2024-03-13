@@ -52,7 +52,11 @@ createApp({
     },
 
     eliminaTask(indice){
-      this.todoList.splice(indice, 1)
+
+      if(this.clicked = true){
+        this.todoList.splice(indice, 1)
+      }
+      
     },
 
     doneTask(){

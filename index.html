@@ -32,7 +32,7 @@
     
     <div class="task-container">
       <ul v-if="todoList.length > 0">
-        <li @click="doneTask"  v-for="(task, indice) in todoList" :class="{'done' : clicked}">
+        <li @click.stop="doneTask"  v-for="(task, indice) in todoList" :class="{'done' : clicked}">
           <span>
             {{task.text}}
             <i @click="eliminaTask" class="fa-solid fa-trash-can"></i>
