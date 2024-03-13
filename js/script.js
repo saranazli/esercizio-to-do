@@ -51,14 +51,14 @@ createApp({
 
     eliminaTask(indice){
 
-      if(this.clicked = true){
+      if(this.done = true){
         this.todoList.splice(indice, 1)
       }
 
     },
 
     doneTask(myTask){
-      myTask = true
+      myTask.done = true
     }
 
   }
