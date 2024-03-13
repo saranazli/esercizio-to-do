@@ -22,19 +22,21 @@
 
 
     <div>
-      <input v-model="newTask" placeholder="new task" @keyup.enter="addTask()" type="text" name="" id="">
-      <button @click="addTask" ></button>
+      <input v-model="newTask" placeholder="new task" @keyup.enter="addTask" type="text" name="" id="">
+      <button class="btn btn-primary" @click="addTask" > Aggiungi</button>
       <p>{{errorMsg}}</p>
     </div>
-
+    
     <div>
-      <ul>
+      <ul v-if="todoList.length > 0">
         <li v-for="(task, indice) in todoList">
           <span>
             {{task}}
+            <i @click="eliminaTask()" class="fa-solid fa-trash-can"></i>
           </span>
         </li>
       </ul>
+      <h3 v-else>non ci sono tasks</h3>
     </div>
 
   </div>

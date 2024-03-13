@@ -33,6 +33,10 @@ createApp({
       }else{
         this.errorMsg = 'attenzione il testo è troppo corto'
       }
+    },
+
+    eliminaTask(indice){
+      this.todoList.splice(indice, 1)
     }
 
   }
