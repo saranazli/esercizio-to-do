@@ -25,17 +25,17 @@
     </div>
 
     <div class="new-task">
-      <input v-model="newTask" placeholder="new task" @keyup.enter="addTask" type="text" name="" id="">
-      <button class="" @click="addTask" > Aggiungi</button>
+      <input v-model="newTask.text" placeholder="new task" @keyup.enter="addTask" type="text" name="" id="">
+      <button @click="addTask" > Aggiungi </button>
       <p class="error">{{errorMsg}}</p>
     </div>
     
     <div class="task-container">
       <ul v-if="todoList.length > 0">
-        <li v-for="(task, indice) in todoList">
+        <li @click="doneTask"  v-for="(task, indice) in todoList" :class="{'done' : clicked}">
           <span>
-            {{task}}
-            <i @click="eliminaTask()" class="fa-solid fa-trash-can"></i>
+            {{task.text}}
+            <i @click="eliminaTask" class="fa-solid fa-trash-can"></i>
           </span>
         </li>
       </ul>

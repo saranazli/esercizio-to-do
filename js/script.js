@@ -20,11 +20,7 @@ createApp({
         {
           text:'ripasso',
           done: false
-        },
-        {
-          text:'esercizio',
-          done: false
-        },
+        }
       ],
 
       newTask: [
@@ -35,7 +31,9 @@ createApp({
         }
       ],
 
-      errorMsg: ''
+      errorMsg: '',
+
+      clicked: false
 
     }
   },
@@ -44,7 +42,7 @@ createApp({
 
     addTask(){
 
-      if(this.newTask.length >= 5){
+      if(this.newTask.text.length >= 5){
         this.todoList.unshift(this.newTask)
         this.newTask = ''
         this.errorMsg = ''
@@ -55,6 +53,10 @@ createApp({
 
     eliminaTask(indice){
       this.todoList.splice(indice, 1)
+    },
+
+    doneTask(){
+      this.clicked = true
     }
 
   }
