@@ -11,7 +11,7 @@ createApp({
 
         {
           text:'bucato',
-          done: true
+          done: false
         },
         {
           text:'spesa',
@@ -58,7 +58,7 @@ createApp({
     },
 
     doneTask(myTask){
-      this.done = true
+      myTask = true
     }
 
   }
