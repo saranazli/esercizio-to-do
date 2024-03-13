@@ -33,8 +33,6 @@ createApp({
 
       errorMsg: '',
 
-      clicked: false
-
     }
   },
 
@@ -56,11 +54,11 @@ createApp({
       if(this.clicked = true){
         this.todoList.splice(indice, 1)
       }
-      
+
     },
 
     doneTask(){
-      this.clicked = true
+      this.done = true
     }
 
   }
