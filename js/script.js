@@ -9,13 +9,31 @@ createApp({
 
       todoList: [
 
-        'ripasso',
-        'ripasso1',
-        'ripasso2',
-        'ripasso3'
+        {
+          text:'bucato',
+          done: false
+        },
+        {
+          text:'spesa',
+          done: false
+        },
+        {
+          text:'ripasso',
+          done: false
+        },
+        {
+          text:'esercizio',
+          done: false
+        },
       ],
 
-      newTask: '',
+      newTask: [
+
+        {
+          text : '',
+          done: false
+        }
+      ],
 
       errorMsg: ''
 
