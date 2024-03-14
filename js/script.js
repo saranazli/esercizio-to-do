@@ -51,8 +51,12 @@ createApp({
 
     eliminaTask(indice){
 
-      if(this.done = true){
+      this.errorMsg = ''
+
+      if(this.todoList[indice].done){
         this.todoList.splice(indice, 1)
+      }else{
+        this.errorMsg = 'attenzio devi compiere la task'
       }
 
     },
